@@ -16,7 +16,7 @@ class UniqueCollection {
     }
 
     fun clear () {
-
+        collection.clear()
     }
 
     fun size() = collection.size
