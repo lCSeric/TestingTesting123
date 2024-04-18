@@ -38,14 +38,21 @@ class UniqueCollectionTest {
     }
 
     @Test
-    fun removeSpecificItem(){
+    fun removeSpecificItem() {
         collection.addItem(Item("item1"))
         collection.addItem(Item("item2"))
 
         collection.remove(Item("item1"))
         assertEquals(1, collection.size())
-        //assertEquals("item2", collection.get(0).name)
+    }
 
+    @Test
+    fun checkRemainingItem() {
+        collection.addItem(Item("item1"))
+        collection.addItem(Item("item2"))
+
+        collection.remove(Item("item1"))
+        assertEquals("item2", collection.get(0).name)
     }
 
     @Test
